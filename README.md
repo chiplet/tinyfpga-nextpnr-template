@@ -70,6 +70,10 @@ cmake . -DARCH=ice40 -DBUILD_GUI=ON
 make -j$(nproc)
 sudo make install
 ```
+## Install tinyprog
+```shell
+pip3 install tinyprog
+```
 
 # Build
 Build the project:

@@ -25,7 +25,7 @@ all: $(PROJ).rpt $(PROJ).bin
 	yosys -p 'synth_ice40 -top $(PROJ) -json $@' $<
 
 %.asc: $(PIN_DEF) %.json
-	nextpnr-ice40 --package cm81 --$(DEVICE) --json top.json --pcf $(PIN_DEF) --asc $@
+	nextpnr-ice40 --package cm81 --$(DEVICE) --json $(PROJ).json --pcf $(PIN_DEF) --asc $@
 
 %.bin: %.asc
 	icepack $< $@
